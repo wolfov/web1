@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{77583ADC-C3D9-4769-A10E-3CDA025567CE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Site", "Site", "{6AEC2B64-4575-4377-A05B-4A892B4795FF}"
 	ProjectSection(SolutionItems) = preProject
 		HTMLPage.html = HTMLPage.html
 	EndProjectSection
