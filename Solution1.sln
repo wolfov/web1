@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Site", "Site", "{592AFB15-7736-4606-A503-F1AB206A2E34}"
 	ProjectSection(SolutionItems) = preProject
 		Site\HTMLPage.html = Site\HTMLPage.html
+		Site\Style.css = Site\Style.css
 	EndProjectSection
 EndProject
 Global
