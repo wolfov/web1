@@ -127,6 +127,7 @@ a {
   position: relative;
   max-width: 467px;
   width: 100%;
+  height: 100%;
 }
 .blog-card__picture::before {
   content: "";
@@ -135,6 +136,7 @@ a {
   width: 100%;
 }
 .blog-card__img {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
