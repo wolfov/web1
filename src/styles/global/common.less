@@ -36,5 +36,36 @@ body {
 a {
     color: @black;
     outline: none;
-    text-decoration:none;
+    text-decoration: none;
 }
+
+input,
+textarea,
+select {
+    box-shadow: none;
+    outline: none;
+    color: @black;
+    font-family: @font1;
+}
+
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
+    &::placeholder {
+        color: @grey3;
+        transition: color 0.2s;
+    }
+
+    &:focus {
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+
+/*td {
+    border: 1px solid #BFBFBF;
+}*/

@@ -4,13 +4,23 @@
     display: flex;
     width: 100%;
 
-    &__picture {
+    &__link {
+        flex-shrink: 0;
+        align-self: flex-start;
+        display: block;
+        width: 467px;
         margin-right: 60px;
+        font-size: 0;
+        text-decoration: none;
+    }
+
+
+    &__picture {
         display: block;
         position: relative;
-        max-width: 467px;
         width: 100%;
         height: 100%;
+
         &::before {
             content: "";
             display: block;
@@ -20,7 +30,7 @@
     }
 
     &__img {
-        display:block;
+        display: block;
         position: absolute;
         top: 0;
         left: 0;
@@ -29,8 +39,15 @@
     }
 
     &__info {
+        box-sizing: border-box;
+        position: relative;
         display: flex;
         flex-direction: column;
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding: 30px 0;
+        padding-right: 150px;
     }
 
     &__info-time {
@@ -41,35 +58,26 @@
         color: @black;
     }
 
-    &__title-link {
-        &:hover,
-        &:active {
-            .blog-card__title,
-            .blog-card__icon {
-                color: @red_hover;
-            }
+    &__title {
+        margin: auto 0 40px;
+        color: @black;
+        text-decoration-color: transparent;
+        transition: color 0.2s, text-decoration-color 0.2s;
+        font-weight: 600;
+        font-size: 24px;
 
-            .blog-card__title {
-                text-decoration-color: transparent;
-            }
+        &:hover {
+            color: @red;
+            text-decoration-color: @red;
         }
     }
 
-    &__title {
-        margin: 0;
-        text-decoration: underline;
-        text-decoration-color: transparent;
-        font-weight: 700;
-        color: @black;
-        transition: color 0.2s,text-decoration-color 0.2s;
-    }
 
     &__icon {
         position: absolute;
         right: 0;
-        bottom: 90px;
-        display: block;
-        color: @black;
-        transition: color 0.2s;
+        bottom: 30px;
+        color: inherit;
+        transition: none;
     }
 }
