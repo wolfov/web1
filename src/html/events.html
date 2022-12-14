@@ -7,11 +7,9 @@
     @@include("blocks/page-header.html")
     <main class="main">
         <div class="events">
-            <div class="events__listing listing">
-                <h2 class="listing__section-title section-title">
-                    Events
-                </h2>
-                <div class="listing__events-card">
+            <section class="events__listing listing">
+                <h2 class="section-title">Events</h2>
+                <div class="listing__events-list">
                     @@loop('blocks/event-card.html', [
                     {
                     "class": "listing__event-card",
@@ -42,7 +40,7 @@
                     }
                     ])
                 </div>
-            </div>
+            </section>
             @@include("blocks/table.html")
         </div>
     </main>
