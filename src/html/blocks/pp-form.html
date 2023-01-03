@@ -1,65 +1,81 @@
 <div class="pp">
     <div class="pp__block">
+        <span class="field__form_title">
+            Заполните форму
+            и мы подберем площадку
+        </span>
         <form>
-            <div class="radio">
-                <label class="radio__item">
-                    <input class="radio__input checked" type="radio" name="format" value="seminar" checked>
-                    <span class="radio__mark"></span>
-                    <span>Мастер-класс/семинар</span>
+            <div class="field__grid_event">
+                <div class="radio field__grid_format">
+                    <span class="field__title">Формат мероприятия:</span>
+                    <label class="radio__item">
+                        <input class="radio__input checked" type="radio" name="format" value="seminar" checked>
+                        <span class="radio__mark"></span>
+                        <span>Мастер-класс/семинар</span>
+                    </label>
+                    <label class="radio__item">
+                        <input class="radio__input" type="radio" name="format" value="concert">
+                        <span class="radio__mark"></span>
+                        <span>Концерт/выступление</span>
+                    </label>
+                    <label class="radio__item">
+                        <input class="radio__input" type="radio" name="format" value="exhibition">
+                        <span class="radio__mark"></span>
+                        <span>Выставка/показ</span>
+                    </label>
+                    <label class="radio__item">
+                        <input class="radio__input" type="radio" name="format" value="other">
+                        <span class="radio__mark"></span>
+                        <span>Другое</span>
+                    </label>
+                </div>
+
+                <label class="field__grid_guest_count">
+                    <span class="field__title">Планируемое количество посетителей:</span>
+                    <select class="field__select" name="amount">
+                        <option value="20">до 20 человек</option>
+                        <option value="100">от 20 до 100 человек</option>
+                        <option value="500">от 100 до 500 человек</option>
+                        <option value="1000">более 500 человек</option>
+                    </select>
                 </label>
-                <label class="radio__item">
-                    <input class="radio__input" type="radio" name="format" value="concert">
-                    <span class="radio__mark"></span>
-                    <span>Концерт/выступление</span>
-                </label>
-                <label class="radio__item">
-                    <input class="radio__input" type="radio" name="format" value="exhibition">
-                    <span class="radio__mark"></span>
-                    <span>Выставка/показ</span>
-                </label>
-                <label class="radio__item">
-                    <input class="radio__input" type="radio" name="format" value="other">
-                    <span class="radio__mark"></span>
-                    <span>Другое</span>
+                <label class="field__grid_date">
+                    <span class="field__title">Дата проведения:</span>
+                    <div>
+                        <input class="field__input field__input--daymounth" type="text" placeholder="ДД" name="day" required>
+                        <input class="field__input field__input--daymounth" type="text" placeholder="ММ" name="mounth" required>
+                        <input class="field__input field__input--year" type="text" placeholder="ГГГГ" name="year" required>
+                    </div>
                 </label>
             </div>
-
-            <label class="field form__field">
-                <span class="field__title">Планируемое количество посетителей:</span>
-                <select class="field__select" name="amount">
-                    <option value="20">до 20 человек</option>
-                    <option value="100">от 20 до 100 человек</option>
-                    <option value="500">от 100 до 500 человек</option>
-                    <option value="1000">более 500 человек</option>
-                </select>
-            </label>
-
-
-            <label class="field form__field">
-                <span class="field__label">
-                    Имя*
-                </span>
-                <input class="field__input" type="text" placeholder="Имя" name="firstname" required>
-            </label>
-            <label class="field form__field">
-                <span class="field__label">
-                    Фамилия*
-                </span>
-                <input class="field__input" type="text" placeholder="Фамилия" name="secondname" required>
-            </label>
-            <label class="field form__field">
-                <span class="field__label">
-                    Телефон*
-                </span>
-                <input class="field__input" type="text" placeholder="Телефон" name="tel" required>
-            </label>
-            <label class="field form__field">
-                <span class="field__label">
-                    Email*
-                </span>
-                <input class="field__input" type="text" placeholder="Email" name="email" required>
-            </label>
-            <label class="field">
+            <span class="field__title">Контактные данные:</span>
+            <div class="field__grid_contact">
+                <label class="field field__grid_firstname">
+                    <span class="field__label">
+                        Имя*
+                    </span>
+                    <input class="field__input" type="text" placeholder="Имя" name="firstname" required>
+                </label>
+                <label class="field__grid_secondname">
+                    <span class="field__label">
+                        Фамилия*
+                    </span>
+                    <input class="field__input" type="text" placeholder="Фамилия" name="secondname" required>
+                </label>
+                <label class="field__grid_number">
+                    <span class="field__label">
+                        Телефон*
+                    </span>
+                    <input class="field__input" type="text" placeholder="Телефон" name="tel" required>
+                </label>
+                <label class="field__grid_email">
+                    <span class="field__label">
+                        Email*
+                    </span>
+                    <input class="field__input" type="text" placeholder="Email" name="email" required>
+                </label>
+            </div>
+            <label>
                 <span class="field__title">Есть пожелания? Напишите нам:</span>
                 <textarea class="field__textarea" name="comment"></textarea>
             </label>
@@ -71,11 +87,16 @@
                        required
                        checked />
                 <span class="check__mark"></span>
-                <span>
+                <span class="field__L15margin">
                     Я соглашаюсь с пользовательским соглашением и с политикой
                     использования персональных данных
                 </span>
             </label>
+            <div class="field__buttons">
+                <button class="field__button field__button--send">Отправить</button>
+                <button class="field__button">Закрыть</button>
+            </div>
+
         </form>
     </div>
 </div>
