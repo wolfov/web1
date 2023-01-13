@@ -49,9 +49,17 @@
   </header>
 
 
-  <main class="main">
+  <main class="main container">
+    <nav class="breadcrumb">
+      <ol>
+        <li>
+          <a href="#">Главная</a>
+        </li>
+        <li>Мероприятия</li>
+      </ol>
+    </nav>
     <div class="events">
-      <section class="events__listing listing">
+      <section class="listing">
         <h2 class="section-title">Мероприятия</h2>
         <div class="listing__events-list">
           <article class="event-card listing__event-card">
@@ -63,7 +71,7 @@
                 Собираемся и слушаем альбом Nirvanа
               </h4>
               <p class="event-card__description">
-                Это третий альбом группы...
+                Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.
               </p>
               <time class="event-card__time" datetime="2022-12-07T18:00">
                 07.12.2022 | начало 18.00
@@ -79,7 +87,7 @@
                 Есть тема, нужно обсудить с HowStuffWorks
               </h4>
               <p class="event-card__description">
-                Один из самых популярных подкастов в мире...
+                Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.
               </p>
               <time class="event-card__time" datetime="2022-12-14T18:30">
                 14.12.2022 | начало 18.30
@@ -89,22 +97,79 @@
           <article class="event-card listing__event-card">
             <a href="#" class="event-card__link">
               <picture class="event-card__picture">
-                <img class="event-card__img" src="assets/images/nirvana.png" alt="nirvana" />
+                <img class="event-card__img" src="assets/images/sade.png" alt="sade" />
               </picture>
               <h4 class="event-card__title">
-                Собираемся и слушаем альбом Nirvana
+                Вечер | The Best of Sade
               </h4>
               <p class="event-card__description">
-                Это третий альбом группы...
+                Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.
               </p>
-              <time class="event-card__time" datetime="2022-12-07T18:00">
-                07.12.2022 | начало 18.00
+              <time class="event-card__time" datetime="2022-12-16T20:00">
+                16.12.2022 | начало 20.00
+              </time>
+            </a>
+          </article>
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <img class="event-card__img" src="assets/images/malevich.png" alt="malevich" />
+              </picture>
+              <h4 class="event-card__title">
+                Выставка Малевича в Томске
+              </h4>
+              <p class="event-card__description">
+                Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.
+              </p>
+              <time class="event-card__time" datetime="2022-12-23T20:00">
+                23.12.2022 | начало 20.00
+              </time>
+            </a>
+          </article>
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <img class="event-card__img" src="assets/images/tatler.png" alt="tatler" />
+              </picture>
+              <h4 class="event-card__title">
+                Мастер — класс по студийной съемке от Tatler
+              </h4>
+              <p class="event-card__description">
+                Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.
+              </p>
+              <time class="event-card__time" datetime="2022-12-25T13:00">
+                25.12.2022 | начало 13.00
+              </time>
+            </a>
+          </article>
+          <article class="event-card listing__event-card">
+            <a href="#" class="event-card__link">
+              <picture class="event-card__picture">
+                <img class="event-card__img" src="assets/images/the hatters.png" alt="the hatters" />
+              </picture>
+              <h4 class="event-card__title">
+                Повесилимся на славу на концерте The Hatters
+              </h4>
+              <p class="event-card__description">
+                Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко
+              </p>
+              <time class="event-card__time" datetime="2022-12-27T10:00">
+                27.12.2022 | начало 10.00
               </time>
             </a>
           </article>
         </div>
+        <a href="#" class="listing__show_more">Показать еще
+          <svg width="91" height="60" transform="rotate(90) translate(7 0)">
+            <use xlink:href="../assets/icons/symbols.svg#arrow-right"></use>
+          </svg>
+        </a>
       </section>
-      <table class="events__tariffs-table  table">
+    </div>
+    <div class="events__additonally">
+      <h2 class="section-title">Мероприятия</h2>
+      <span class="events__additonally_text">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</span>
+      <table class="  table">
         <thead class="table__head">
           <tr class="table__head-tr">
             <th class="table__th"></th>
@@ -118,7 +183,7 @@
             <th class="table__body-th">Стоимость за час</th>
             <td class="table__td">1 000 ₽</td>
             <td class="table__td">3 000 ₽</td>
-            <td class="table__td">3 000 ₽</td>
+            <td class="table__td">6 000 ₽</td>
           </tr>
           <tr class="table__tr">
             <th class="table__body-th">Ведущий мероприятия</th>
@@ -207,8 +272,104 @@
         </tfoot>
       </table>
     </div>
+    <div class="events__contact">
+      <h2 class="contact__header">Я ХОЧУ:</h2>
+      <div class="contact__actions">
+        <button class="contact__btn contact__btn--want_event">Провести мероприятие</button>
+        <button class="contact__btn contact__btn--be_tenant">Стать арендатором</button>
+      </div>
+      <div class="contact__info-list">
+        <div class="contact__info">
+          <div class="contact__info_pading">
+            <svg width="20" height="20">
+              <use xlink:href="../assets/icons/symbols.svg#information"></use>
+            </svg>
+          </div>
+          <span class="contact__info_title">Цены</span>
+          <span class="contact__info_text">Цены, указанные на сайте носят информационный характер. Мы придерживаемся индивидуального подхода в работе с клиентом.</span>
+        </div>
+        <div class="contact__info">
+          <div class="contact__info_pading">
+            <svg width="20" height="20">
+              <use xlink:href="../assets/icons/symbols.svg#contact"></use>
+            </svg>
+          </div>
+          <span class="contact__info_title">Контакты</span>
+          <span class="contact__info_text">
+            Отдел организации мероприятий
+            <br />
+            +7 499 350 0730
+            <br />
+            hi@tagree.ru
+          </span>
+        </div>
+        <div class="contact__info">
+          <div class="contact__info_pading">
+            <svg width="20" height="20">
+              <use xlink:href="../assets/icons/symbols.svg#handshake"></use>
+            </svg>
+          </div>
+          <span class="contact__info_title">Преимущество</span>
+          <span class="contact__info_text">Мы имеем все возможности для того, чтобы помочь как малому бизнесу и молодым талантам, так и большим корпорациям и холдингам.</span>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer class="page-footer"></footer>
+  <footer class="page-footer">
+    <div class="page-footer__mustaches">
+      <div class="page-footer__mustache page-footer__mustache--left"></div>
+      <div class="page-footer__mustache page-footer__mustache--right"></div>
+    </div>
+    <div class="page-footer__flex_container">
+      <div class="page-footer__links">
+        <div class="page-footer__redline"></div>
+        <ul>
+          <li>
+            <a href="#">Календарь мероприятий</a>
+          </li>
+          <li>
+            <a href="#">Провести мероприятие</a>
+          </li>
+          <li>
+            <a href="#">Стать арендатором</a>
+          </li>
+          <li>
+            <a href="#">Наши проекты</a>
+          </li>
+          <li>
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__email_subscribe">
+        <span class="page-footer__email_subscribe_title">Подпишись и будь в курсе происходящего</span>
+        <div class="flexing">
+          <input class="page-footer__email_subscribe_input" placeholder="Email" type="email" name="email" value="" />
+          <button class="page-footer__email_subscribe_send">Подписаться</button>
+        </div>
+        <label class="check">
+          <input type="checkbox" name="agree" class="check__input" required checked />
+          <span class="check__mark"></span>
+          <span class="page-footer__email_subscribe_agree">
+            Согласен на обработку персональных данных
+          </span>
+        </label>
+      </div>
+      <div class="page-footer__socials">
+        <a href="#">
+          <img src="assets/icons/insta.png" alt="inst" />
+        </a>
+        <a href="#">
+          <img src="assets/icons/vk.png" alt="vk" />
+        </a>
+      </div>
+    </div>
+    <span class="page-footer__copyright">© Millennials 2022</span>
+    <div class="page-footer__link-list">
+      <a href="#">Политика конфиденциальности</a>
+      <a href="#">Cookies</a>
+    </div>
+  </footer>
 </body>
 
 </html>

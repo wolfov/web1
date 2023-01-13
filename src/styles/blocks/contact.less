@@ -1,0 +1,80 @@
+.contact {
+    &__header {
+        font-family: @font_Lora;
+        font-size: 22px;
+        font-weight: 400;
+        text-align: center;
+        /*left: 16px;
+        position: relative;*/
+        margin-bottom: 50px;
+    }
+
+    &__actions {
+        /*text-align:center;*/
+
+        display: flex;
+        justify-content: center;
+        column-gap: 106px;
+        margin-bottom: 100px;
+    }
+
+    &__btn {
+        font-weight: 600;
+        font-size: 16px;
+        padding: 15px 40px;
+        cursor:pointer;
+    }
+
+    &__btn--want_event {
+        color: @white;
+        background-color: @red;
+        border: none;
+    }
+
+    &__btn--be_tenant {
+        color: @black;
+        background-color: transparent;
+        border: 1px solid @black;
+        margin:0 14px;
+    }
+
+    &__info-list {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 15px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    &__info_pading {
+        padding: 50px 50px;
+        background-color: @black;
+        max-height: 20px;
+        max-width: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__info_title {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__info_text {
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 400px;
+        text-align: center;
+        display: block;
+    }
+}

@@ -1,10 +1,8 @@
 .pp {
     box-sizing: border-box;
     padding: 50px;
-    z-index: 110;
     position: fixed;
-    /*display: flex;*/
-    /*padding: 50px;*/
+    z-index: 110;
     top: 0;
     left: 0;
     right: 0;
@@ -12,16 +10,31 @@
     justify-content: center;
     background: rgba(28,27,27,0.4);
     backdrop-filter: blur(25px);
+    overflow-y: scroll;
 
     &__block {
+        position: relative;
+        margin: 0 auto;
         max-width: 1210px;
-        width: 100%;
+        z-index: 120;
         padding: 100px 170px 40px;
         background-color: @grey;
         background-image: url("../../assets/images/noise.png");
         background-position: 0 0, 0 0;
-        background-size: auto,100% auto;
-        background-repeat: repeat,repeat-y;
-        overflow-y: auto;
+    }
+
+    &__block_close {
+        display: flex;
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        top: -30px;
+        right: -30px;
+        left: auto;
+        background-color: #1f1e1e;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        cursor:pointer;
     }
 }

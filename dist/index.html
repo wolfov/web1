@@ -12,79 +12,110 @@
 
 
 <body>
-  <header class="page-header">
-    <div class="page-header__container">
-      <a href="#" class="page-header__logo">
-        <svg class="page-header__logo-icon" width="202" height="147">
-          <use xlink:href="../assets/icons/symbols.svg#logo"></use>
+
+
+  <div class="pp">
+    <div class="pp__block">
+      <span class="field__form_title">
+        Заполните форму
+        <br> и мы подберем площадку
+      </span>
+      <div class="pp__block_close">
+        <svg width="24" height="24">
+          <use xlink:href="../assets/icons/symbols.svg#cross"></use>
         </svg>
-      </a>
-      <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
-        <a href="#" class="page-header__nav-link">О нас</a>
-        <a href="#" class="page-header__nav-link">Контакты</a>
-        <div class="page-header__nav-user">
-          <a href="#" class="page-header__nav-user-link">
-            Wolfov
-          </a>
-          <a href="#" class="page-header__nav-logout">
-            <svg class="page-header__nav-logout-icon" width="24" height="24">
-              <use xlink:href="assets/icons/symbols.svg#door"></use>
-            </svg>
-          </a>
-        </div>
-      </nav>
-      <div class="page-header__right-block">
-        <a href="#" class="page-header__user-btn">
-          Войти
-          <svg class="page-header__user-icon" width="21" height="18">
-            <use xlink:href="assets/icons/symbols.svg#user"></use>
-          </svg>
-        </a>
-        <button type="button" class="page-header__nav-toggle"></button>
       </div>
-    </div>
-  </header>
-
-
-  <main class="main">
-    <div class="home">
-      <div class="blog-listing home_blog-listing">
-        <h2 class="blog-listing__section-title section-title">
-          Блог
-        </h2>
-        <div class="blog-listing__listing">
-          <div class="blog-card">
-            <a href="#" class="blog-card__link">
-              <picture class="blog-card__picture">
-                <img src="assets/images/blog/blog1.png" alt="blog1" class="blog-card__img" />
-              </picture>
-            </a>
-            <div class="blog-card__info">
-              <time class="blog-card__info-time" datetime="2022-11-26">
-                26.11.2022
-              </time>
-              <a href="#" class="blog-card__title-link">
-                <h4 class="blog-card__title">
-                  Фотосессия в стенах Театра драмы
-                </h4>
-                <svg class="blog-card__icon" width="91" height="60">
-                  <use xlink:href="../assets/icons/symbols.svg#arrow-right"></use>
-                </svg>
-                <p>
-                  Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было
-                </p>
-              </a>
-            </div>
+      <form>
+        <div class="field__grid_event">
+          <div class="radio field__grid_format">
+            <span class="field__title">Формат мероприятия:</span>
+            <label class="radio__item">
+              <input class="radio__input checked" type="radio" name="format" value="seminar" checked>
+              <span class="radio__mark"></span>
+              <span>Мастер-класс/семинар</span>
+            </label>
+            <label class="radio__item">
+              <input class="radio__input" type="radio" name="format" value="concert">
+              <span class="radio__mark"></span>
+              <span>Концерт/выступление</span>
+            </label>
+            <label class="radio__item">
+              <input class="radio__input" type="radio" name="format" value="exhibition">
+              <span class="radio__mark"></span>
+              <span>Выставка/показ</span>
+            </label>
+            <label class="radio__item">
+              <input class="radio__input" type="radio" name="format" value="other">
+              <span class="radio__mark"></span>
+              <span>Другое</span>
+            </label>
           </div>
+
+          <label class="field__grid_guest_count">
+            <span class="field__title">Планируемое количество посетителей:</span>
+            <select class="field__select" name="amount">
+              <option value="20">до 20 человек</option>
+              <option value="100">от 20 до 100 человек</option>
+              <option value="500">от 100 до 500 человек</option>
+              <option value="1000">более 500 человек</option>
+            </select>
+          </label>
+          <label class="field__grid_date">
+            <span class="field__title">Дата проведения:</span>
+            <div>
+              <input class="field__input field__input--daymounth" type="text" placeholder="ДД" name="day" required>
+              <input class="field__input field__input--daymounth" type="text" placeholder="ММ" name="mounth" required>
+              <input class="field__input field__input--year" type="text" placeholder="ГГГГ" name="year" required>
+            </div>
+          </label>
         </div>
-      </div>
+        <span class="field__title">Контактные данные:</span>
+        <div class="field__grid_contact">
+          <label class="field field__grid_firstname">
+            <span class="field__label">
+              Имя*
+            </span>
+            <input class="field__input" type="text" placeholder="Имя" name="firstname" required>
+          </label>
+          <label class="field__grid_secondname">
+            <span class="field__label">
+              Фамилия*
+            </span>
+            <input class="field__input" type="text" placeholder="Фамилия" name="secondname" required>
+          </label>
+          <label class="field__grid_number">
+            <span class="field__label">
+              Телефон*
+            </span>
+            <input class="field__input" type="text" placeholder="Телефон" name="tel" required>
+          </label>
+          <label class="field__grid_email">
+            <span class="field__label">
+              Email*
+            </span>
+            <input class="field__input" type="text" placeholder="Email" name="email" required>
+          </label>
+        </div>
+        <label>
+          <span class="field__title">Есть пожелания? Напишите нам:</span>
+          <textarea class="field__textarea" name="comment"></textarea>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="agree" class="check__input" required checked />
+          <span class="check__mark"></span>
+          <span>
+            Я соглашаюсь с пользовательским соглашением и с политикой
+            использования персональных данных
+          </span>
+        </label>
+        <div class="field__buttons">
+          <button class="field__button field__button--send">Отправить</button>
+          <button class="field__button">Закрыть</button>
+        </div>
+      </form>
     </div>
-  </main>
-  <footer class="page-footer"></footer>
-
-
+  </div>
 </body>
 
 </html>
