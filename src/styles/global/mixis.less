@@ -20,6 +20,35 @@
 .flexing {
     display: flex;
 }
+.uppercase {
+    text-transform: uppercase;
+}
+.buttonstiless {
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+
+.arrow {
+    cursor: pointer;
+    width: 90px;
+    height: 60px;
+    stroke: #1F1E1E;
+    transition: stroke .2s;
+
+    &:hover {
+        stroke: @red_hover;
+    }
+}
+.texthover {
+    transition: color .2s;
+
+    &:hover {
+        color: @red_hover;
+    }
+}
 
 .width_624 {
     box-sizing: border-box;

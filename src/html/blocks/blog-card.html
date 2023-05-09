@@ -1,23 +1,29 @@
-<div class="blog-card">
-    <a href="#" class="blog-card__link">
-        <picture class="blog-card__picture">
-            <img src="@@img" alt="@@alt" class="blog-card__img" />
-        </picture>
-    </a>
-    <div class="blog-card__info">
-        <time class="blog-card__info-time" datetime="@@datetime">
-            @@time
-        </time>
-        <a href="#" class="blog-card__title-link">
-            <h4 class="blog-card__title">
-                @@title
-            </h4>
-            <svg class="blog-card__icon" width="91" height="60">
+<div class="blog-card__wrapper">
+    <div class="blog-card">
+        <a href="#" class="blog-card__link">
+            <picture class="blog-card__picture">
+                <img src="@@img" alt="@@alt" class="blog-card__img" />
+            </picture>
+        </a>
+        <div class="blog-card__info_body">
+            <div class="blog-card__info">
+                <time class="blog-card__info-time" datetime="@@datetime">
+                    @@time
+                </time>
+                <a href="#" class="blog-card__content">
+                    <h4 class="blog-card__title">
+                        @@title
+                    </h4>
+                    <p class="blog-card__text">
+                        @@text
+                    </p>
+                </a>
+            </div>
+            <svg href="#" class="blog-card__arrow arrow">
                 <use xlink:href="../assets/icons/symbols.svg#arrow-right"></use>
             </svg>
-            <p>
-                @@text
-            </p>
-        </a>
+        </div>
     </div>
 </div>
+<!--<div class="@@splitter"></div>-->
+

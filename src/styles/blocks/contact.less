@@ -4,38 +4,48 @@
         font-size: 22px;
         font-weight: 400;
         text-align: center;
-        /*left: 16px;
-        position: relative;*/
         margin-bottom: 50px;
     }
 
     &__actions {
-        /*text-align:center;*/
-
         display: flex;
         justify-content: center;
-        column-gap: 106px;
+        column-gap: 98px;
         margin-bottom: 100px;
     }
 
     &__btn {
         font-weight: 600;
         font-size: 16px;
-        padding: 15px 40px;
-        cursor:pointer;
+        padding: 15px 0;
+        cursor: pointer;
+        font-family: "opensans",serif;
     }
 
     &__btn--want_event {
         color: @white;
         background-color: @red;
         border: none;
+        width: 272px;
+        transition: background-color .2s;
+
+        &:hover {
+            background-color: @red_hover;
+        }
     }
 
     &__btn--be_tenant {
         color: @black;
         background-color: transparent;
         border: 1px solid @black;
-        margin:0 14px;
+        width: 246px;
+        margin-left: 8px;
+        transition: color .2s, background-color .2s;
+
+        &:hover {
+            color: @white;
+            background-color: @black
+        }
     }
 
     &__info-list {

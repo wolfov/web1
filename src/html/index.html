@@ -6,7 +6,27 @@
     @@include("blocks/page-header.html")
     <main class="main container">
         <div class="home">
-            @@include("blocks/blog-listing.html",{"class":"home_blog-listing"})
+            <h1 class="index__title">арт — пространство</h1>
+            <img src="assets/images/logo.png" alt="logo" class="index__title_img" />
+            <h1 class="index__title index____title--marginreverse">
+                для людей, горящих сердец и делом <br>
+                место для настоящего
+            </h1>
+            <h2 class="contact__header uppercase">Я хочу:</h2>
+            <div class="contact__actions">
+                <button class="contact__btn contact__btn--want_event">Провести мероприятие</button>
+                <button class="contact__btn contact__btn--be_tenant">Стать арендатором</button>
+            </div>
+            @@include("blocks/section-about.html")
+            @@include("blocks/section-activity.html")
+            @@include("blocks/blog-listing.html")
+            @@include("blocks/section-contacts.html")
+            <div class="index__outofbounds">
+                <p class="index__outofbounds_1">Просто делайте, что нравится,</p>
+                <p class="index__outofbounds_1_1">Просто делайте,</p>
+                <p class="index__outofbounds_2">что нравится,</p>
+                <p class="index__outofbounds_3">а мы вам поможем</p>
+            </div>
         </div>
     </main>
     @@include("blocks/page-footer.html")

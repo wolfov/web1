@@ -1,18 +1,35 @@
-<div class="blog-listing @@class">
-    <h2 class="blog-listing__section-title section-title">
-        Блог
-    </h2>
-    <div class="blog-listing__listing">
+<div class="blog-listing">
+    <h2 class="blog-listing__section-title section-title">Блог</h2>
+    <div class="blog-listing__listings">
         @@loop("blog-card.html",[
         {
-        "class":"listing__events-cars",
+        "splitter":"blog-listing__splitter",
         "img":"assets/images/blog/blog1.png",
         "alt":"blog1",
         "title":"Фотосессия в стенах Театра драмы",
         "text":"Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было ",
         "time":"26.11.2022",
         "datetime":"2022-11-26"
+        },
+        {
+        "splitter":"blog-listing__splitter",
+        "img":"assets/images/blog/blog2.png",
+        "alt":"blog2",
+        "title":"Выставка VR в Томске",
+        "text":"Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.",
+        "time":"05.11.2022",
+        "datetime":"2022-11-05"
+        },
+        {
+        "splitter":"",
+        "img":"assets/images/blog/blog3.png",
+        "alt":"blog3",
+        "title":"Rocking radio в заброшенном ангаре",
+        "text":"15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.",
+        "time":"01.11.2022",
+        "datetime":"2022-11-01"
         }
         ])
     </div>
+    <a href="#" class="blog-listing__more texthover">Смотреть все</a>
 </div>

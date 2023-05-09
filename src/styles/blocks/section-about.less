@@ -1,0 +1,117 @@
+.section-about {
+    margin-top: 200px;
+
+
+    &__content {
+        margin: 100px 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    &__content_title {
+        width: 868px;
+        font-weight: 700;
+        font-size: 44px;
+    }
+
+    &__content_text {
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    &__content_text--wide {
+        width: 868px;
+        align-self: flex-end;
+    }
+
+    &__content_text--short {
+        width: 344px;
+        grid-area: txt;
+    }
+
+    &__wrap1 {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        column-gap: 41px;
+    }
+
+    &__pic1 {
+        width: 826px;
+        height: 550px;
+    }
+
+    &__pic2 {
+        width: 393px;
+        height: 481px;
+        position: inherit;
+        top: 150px;
+    }
+
+    &__grid-container {
+        display: grid;
+        grid-template-columns: max-content auto;
+        grid-template-rows: 1fr 1fr auto;
+        gap: 0px 60px;
+        grid-template-areas:
+            "pic ." "pic txt" "pic btn";
+    }
+
+    &__wrap2 {
+        display: flex;
+        flex-direction: row;
+        column-gap: 60px;
+    }
+
+    &__wrap_pic3 {
+        position: relative;
+        grid-area: pic;
+    }
+
+    &__pic3-background {
+        width: 930px;
+        height: 246px;
+        position: absolute;
+        background-color: @red;
+    }
+
+    &__pic3 {
+        padding-top: 18.5px;
+        padding-left: 48.9px;
+        padding-right: 7px;
+        position: inherit;
+        width: 874px;
+        height: 342px;
+    }
+
+    &__wrap3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+
+    &__show_more_button {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        grid-area: btn;
+
+        &:hover {
+            .section-about__show_more_button_text {
+                color: @red_hover;
+            }
+
+            .arrow {
+                stroke: @red_hover;
+            }
+        }
+    }
+
+    &__show_more_button_text {
+        font-weight: 600;
+        font-size: 16px;
+        align-self: center;
+        transition: color 0.2s;
+    }
+}
