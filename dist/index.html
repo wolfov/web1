@@ -10,7 +10,6 @@
   <title>my page</title>
 </head>
 
-
 <body>
   <header class="page-header">
     <div class="page-header__container">
@@ -42,7 +41,7 @@
             <use xlink:href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
@@ -59,7 +58,7 @@
       </h1>
       <h2 class="contact__header uppercase">Я хочу:</h2>
       <div class="contact__actions">
-        <button class="contact__btn contact__btn--want_event">Провести мероприятие</button>
+        <button class="contact__btn contact__btn--want_event" id="js-eventOpenBtn">Провести мероприятие</button>
         <button class="contact__btn contact__btn--be_tenant">Стать арендатором</button>
       </div>
       <div class="section-about">
@@ -111,8 +110,6 @@
         </div>
     </div>-->
       </div>
-      <script src="scripts/section-activity.js" defer></script>
-
       <div class="section-activity">
         <h2 class="section-activity__title section-title uppercase">Мероприятия</h2>
         <div class="section-activity__hexagonal_wrap"></div>
@@ -232,6 +229,7 @@
           <a href="#" class="section-activity__more texthover">Смотреть все</a>
         </div>
       </div>
+      <script src="scripts/slider.js" defer></script>
       <div class="blog-listing">
         <h2 class="blog-listing__section-title section-title">Блог</h2>
         <div class="blog-listing__listings">
@@ -361,7 +359,7 @@
               </div>
             </div>
           </div>
-          <img src="assets/images/map.png" alt="map" class="section-contacts__content_img">
+          <div class="section-contacts__map"></div>
         </div>
       </div>
 
@@ -398,20 +396,21 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__email_subscribe">
-        <span class="page-footer__email_subscribe_title">Подпишись и будь в курсе происходящего</span>
-        <div class="page-footer__email_container">
-          <input class="page-footer__email_subscribe_input" placeholder="Email" type="email" name="email" value="" />
-          <button class="page-footer__email_subscribe_send">Подписаться</button>
+      <form action="https://jsonplaceholder.typicode.com/posts" id="js-subscribeForm">
+        <span class="page-footer__subscribe_title">Подпишись и будь в курсе происходящего</span>
+        <div class="page-footer__subscribe_container">
+          <div class="page-footer__subscribe_column">
+            <input class="page-footer__subscribe_input" placeholder="Email" type="email" name="email" value="" />
+          </div>
+          <button class="page-footer__subscribe_btn">Подписаться</button>
         </div>
+
         <label class="check">
-          <input type="checkbox" name="agree" class="check__input" required checked />
+          <label class="check__text">Согласен на обработку персональных данных</label>
+          <input type="checkbox" name="agree" class="check__input" required />
           <span class="check__mark"></span>
-          <span class="page-footer__email_subscribe_agree">
-            Согласен на обработку персональных данных
-          </span>
         </label>
-      </div>
+      </form>
     </div>
     <div class="page-footer__orgaspects">
       <div class="page-footer__orgaspects-text">
@@ -435,8 +434,118 @@
       </div>
     </div>
   </footer>
+  <div class="pp" id="js-eventPP">
+    <div class="pp__block">
+      <span class="field__form_title uppercase">
+        Заполните форму
+        <br> и мы подберем площадку
+      </span>
+      <button class="pp__x-btn js-ppCloseBtn">
+        <svg width="24" height="24" class="pp__x-btn_icon">
+          <use xlink:href="../assets/icons/symbols.svg#cross"></use>
+        </svg>
+      </button>
+      <form class="field" id="js-eventForm">
+        <div class="field__grid_event">
+          <div class="radio field__grid_format">
+            <span class="field__title">Формат мероприятия:</span>
+            <label class="radio__item">
+              <input class="radio__input checked" type="radio" name="format" value="seminar" checked>
+              <span class="radio__mark"></span>
+              <span>Мастер-класс/семинар</span>
+            </label>
+            <label class="radio__item">
+              <input class="radio__input" type="radio" name="format" value="concert">
+              <span class="radio__mark"></span>
+              <span>Концерт/выступление</span>
+            </label>
+            <label class="radio__item">
+              <input class="radio__input" type="radio" name="format" value="exhibition">
+              <span class="radio__mark"></span>
+              <span>Выставка/показ</span>
+            </label>
+            <label class="radio__item">
+              <input class="radio__input" type="radio" name="format" value="other">
+              <span class="radio__mark"></span>
+              <span>Другое</span>
+            </label>
+          </div>
 
+          <div class="field__grid_guest_count">
+            <span class="field__title">Планируемое количество посетителей:</span>
+            <select class="js-selectric" name="amount">
+              <option value="20">до 20 человек</option>
+              <option value="100">от 20 до 100 человек</option>
+              <option value="500">от 100 до 500 человек</option>
+              <option value="1000">более 500 человек</option>
+            </select>
+          </div>
+          <div class="field__grid_date js-dateField">
+            <span class="field__title">Дата проведения:</span>
+            <div class="field__date-wrap">
+              <div class="field__date-inputs">
+                <input class="field__input field__input--date js-dateDay" type="text" placeholder="ДД" readonly>
+                <input class="field__input field__input--date js-dateMonth" type="text" placeholder="ММ" readonly>
+                <input class="field__input field__input--date-year js-dateYear" type="text" placeholder="ГГГГ" readonly>
+              </div>
+              <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
+            </div>
+          </div>
+        </div>
+        <span class="field__title">Контактные данные:</span>
+        <div class="field__grid_contact">
+          <label class="field field__grid_firstname">
+            <span class="field__label">
+              Имя*
+            </span>
+            <input class="field__input" type="text" placeholder="Имя" name="firstname" required>
+          </label>
+          <label class="field__grid_secondname">
+            <span class="field__label">
+              Фамилия*
+            </span>
+            <input class="field__input" type="text" placeholder="Фамилия" name="secondname" required>
+          </label>
+          <label class="field__grid_number">
+            <span class="field__label">
+              Телефон*
+            </span>
+            <input class="field__input js-mobileMask" type="text" placeholder="Телефон" name="tel" required>
+          </label>
+          <label class="field__grid_email">
+            <span class="field__label">
+              Email*
+            </span>
+            <input class="field__input email" type="text" placeholder="Email" name="email" required>
+          </label>
+        </div>
+        <span class="field__title">Есть пожелания? Напишите нам:</span>
+        <textarea class="field__textarea" name="comment"></textarea>
 
+        <label class="check">
+          <label class="check__text">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</label>
+          <input type="checkbox" name="agree" class="check__input" required />
+          <span class="check__mark"></span>
+        </label>
+        <div class="field__buttons">
+          <button class="field__button field__button--send">Отправить</button>
+          <div class="field__button_wrap">
+            <button class="field__button js-ppCloseBtn">Закрыть</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/jquery-3.7.0.min.js" defer></script>
+  <script src="scripts/jquery.selectric.min.js" defer></script>
+  <script src="scripts/jquery.mask.min.js" defer></script>
+  <script src="scripts/air-datepicker.js" defer></script>
+  <script src="scripts/jquery.validate.js" defer></script>
+  <script src="scripts/jquery.validate-init.min.js" defer></script>
+  <script src="scripts/main.min.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=" defer></script>
+  <script src="scripts/map.min.js" defer></script>
 </body>
 
 </html>

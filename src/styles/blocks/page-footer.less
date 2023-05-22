@@ -2,6 +2,15 @@
     .container;
     display: block;
 
+    label.error,
+    span.error {
+        display: block;
+        margin: 5px 0 0;
+        font-size: 14px;
+        font-weight: 400;
+        color: @red;
+    }
+
     a {
         z-index: 5;
     }
@@ -64,28 +73,29 @@
         margin-bottom: 60px;
     }
 
-    &__email_container {
+    &__subscribe_container {
         display: flex;
         margin-bottom: 15px;
+        flex-wrap: wrap;
 
         @media @bw768 {
             flex: 1 1 100%;
         }
     }
 
-    &__email_subscribe_title {
+    &__subscribe_title {
         font-size: 16px;
         font-weight: 600;
         margin-bottom: 15px;
         display: block;
     }
 
-    &__email_subscribe_agree {
-        font-size: 14px;
-        font-weight: 300;
+    &__subscribe_column {
+        display:flex;
+        flex-direction:column;
     }
 
-    &__email_subscribe_input {
+    &__subscribe_input {
         vertical-align: top;
         border: none;
         padding: 0 28px;
@@ -93,7 +103,7 @@
         height: 49px;
     }
 
-    &__email_subscribe_send {
+    &__subscribe_btn {
         border: none;
         padding: 15px 23px;
         width: 135px;
@@ -105,7 +115,7 @@
         cursor: pointer;
         transition: background-color .2s;
 
-        &:hover{
+        &:hover {
             background-color: @red_hover;
         }
     }

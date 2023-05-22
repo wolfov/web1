@@ -1,14 +1,24 @@
 .check {
     --color: @black;
-
     cursor: pointer;
     box-sizing: border-box;
+    display: block;
     position: relative;
-    display: inline-flex;
-    min-height: 24px;
+    min-height: 26px;
     align-items: center;
     color: var(--color);
     padding-left: 40px;
+
+    &__text {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 400;
+        height: 26px;
+        color: @grey3;
+    }
+
+
 
     &__input {
         .is-hidden();

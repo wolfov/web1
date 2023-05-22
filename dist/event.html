@@ -42,7 +42,7 @@
             <use xlink:href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
@@ -243,20 +243,21 @@
           </li>
         </ul>
       </div>
-      <div class="page-footer__email_subscribe">
-        <span class="page-footer__email_subscribe_title">Подпишись и будь в курсе происходящего</span>
-        <div class="page-footer__email_container">
-          <input class="page-footer__email_subscribe_input" placeholder="Email" type="email" name="email" value="" />
-          <button class="page-footer__email_subscribe_send">Подписаться</button>
+      <form action="https://jsonplaceholder.typicode.com/posts" id="js-subscribeForm">
+        <span class="page-footer__subscribe_title">Подпишись и будь в курсе происходящего</span>
+        <div class="page-footer__subscribe_container">
+          <div class="page-footer__subscribe_column">
+            <input class="page-footer__subscribe_input" placeholder="Email" type="email" name="email" value="" />
+          </div>
+          <button class="page-footer__subscribe_btn">Подписаться</button>
         </div>
+
         <label class="check">
-          <input type="checkbox" name="agree" class="check__input" required checked />
+          <label class="check__text">Согласен на обработку персональных данных</label>
+          <input type="checkbox" name="agree" class="check__input" required />
           <span class="check__mark"></span>
-          <span class="page-footer__email_subscribe_agree">
-            Согласен на обработку персональных данных
-          </span>
         </label>
-      </div>
+      </form>
     </div>
     <div class="page-footer__orgaspects">
       <div class="page-footer__orgaspects-text">

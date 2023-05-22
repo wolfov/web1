@@ -66,6 +66,15 @@
         align-items: center;
         display: flex;
         flex-direction: column;
-        row-gap:18px;
+        row-gap: 18px;
+        transition: color .4s;
+
+        &:hover {
+            color: @red_hover;
+
+            .arrow {
+                stroke: @red_hover;
+            }
+        }
     }
 }

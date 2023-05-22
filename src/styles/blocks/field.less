@@ -1,5 +1,14 @@
 .field {
 
+    label.error,
+    span.error {
+        display: block;
+        margin: 5px 0 0;
+        font-size: 14px;
+        font-weight: 400;
+        color: @red;
+    }
+
     &__grid_event, &__grid_contact {
         display: grid;
         width: 100%;
@@ -65,33 +74,56 @@
         width: 100%;
     }
 
-    &__input--daymounth {
-        margin-right: 15px;
-        width: 70px;
+    &__date-wrap {
+        position: relative;
     }
 
-    &__input--year {
+    &__date-inputs {
+        display: flex;
+        column-gap: 15px;
+    }
+
+    &__input--date {
+        text-align: center;
+        height: 55px;
+        padding: 17px 13px;
+        width: calc(30px + 13px * 2);
+    }
+
+    &__input--date-year {
+        text-align: center;
         width: 110px;
     }
 
-    &__select {
+    &__date-picker {
         box-sizing: border-box;
-        display: block;
+        position: absolute;
+        padding: 0;
+        top: 0;
+        bottom: 0;
         width: 100%;
+        max-width: 250px;
         height: 55px;
-        padding: 0 20px;
         border: none;
         border-radius: 5px;
-        background-color: @white;
-        font-size: 16px;
-        line-height: 1.375;
+        opacity: 0;
+        background-color: coral;
+        cursor: pointer;
     }
+
+    &__select {
+        display: flex;
+        align-items: center;
+        padding-right: 45px;
+        padding-left: 20px;
+    }
+
 
     &__textarea {
         padding: 20px;
         height: 150px;
         width: 100%;
-        margin-bottom:15px;
+        margin-bottom: 15px;
     }
 
     &__title,
@@ -119,7 +151,6 @@
     &__buttons {
         display: flex;
         flex-direction: row;
-        column-gap: 133px;
         flex-wrap: wrap;
         justify-content: flex-start;
         margin-top: 40px;
@@ -136,9 +167,20 @@
         padding: 15px 0 15px;
     }
 
+    &__button_wrap {
+        margin: auto auto
+    }
+
+
     &__button--send {
-        border: 2px solid @black;
+        border: 1px solid @black;
         padding: 15px 200px;
+        transition: color .2s, background-color .2s;
+
+        &:hover {
+            color: @white;
+            background-color: @black
+        }
     }
 
     &__form_title {
@@ -150,10 +192,9 @@
         left: 20px;
         top: -40px;
         z-index: 130;
-
         color: @white;
         font-size: 22px;
         font-weight: 400;
-        font-family:@font_Lora;
+        font-family: @font_Lora;
     }
 }
