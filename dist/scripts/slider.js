@@ -8,6 +8,7 @@ let slideWidth = 0;
 let slidesToShow = 3;
 let slidesgap = 0;
 
+
 function showSlide(index) {
     const offset = -index * (slideWidth);
     slidesContainer.style.transform = `translateX(${offset}px)`;
@@ -33,13 +34,13 @@ function updateSlideWidth() {
 
 function updateSlidesToShow() {
     const windowWidth = window.innerWidth;
-    //if (windowWidth < 768) {
-    //    slidesToShow = 1;
-    //} else if (windowWidth < 1200) {
-    //    slidesToShow = 2;
-    //} else {
-    //    slidesToShow = 3;
-    //}
+    if (windowWidth < 650) {
+        slidesToShow = 1;
+    } else if (windowWidth < 1020) {
+        slidesToShow = 2;
+    } else {
+        slidesToShow = 3;
+    }
     slidesgap = parseInt(getStyle(slides[0], "margin-right"));
     console.log("slidesgap: " + slidesgap);
     updateSlideWidth();

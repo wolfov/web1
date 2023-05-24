@@ -1,101 +1,101 @@
 <div class="pp" id="js-eventPP">
-    <div class="pp__block">
-        <span class="field__form_title uppercase">
-            Заполните форму <br> и мы подберем площадку
-        </span>
-        <button class="pp__x-btn js-ppCloseBtn">
-            <svg width="24" height="24" class="pp__x-btn_icon">
-                <use xlink:href="../assets/icons/symbols.svg#cross"></use>
-            </svg>
-        </button>
-        <form class="field" id="js-eventForm">
-            <div class="field__grid_event">
-                <div class="radio field__grid_format">
-                    <span class="field__title">Формат мероприятия:</span>
-                    <label class="radio__item">
-                        <input class="radio__input checked" type="radio" name="format" value="seminar" checked>
-                        <span class="radio__mark"></span>
-                        <span>Мастер-класс/семинар</span>
-                    </label>
-                    <label class="radio__item">
-                        <input class="radio__input" type="radio" name="format" value="concert">
-                        <span class="radio__mark"></span>
-                        <span>Концерт/выступление</span>
-                    </label>
-                    <label class="radio__item">
-                        <input class="radio__input" type="radio" name="format" value="exhibition">
-                        <span class="radio__mark"></span>
-                        <span>Выставка/показ</span>
-                    </label>
-                    <label class="radio__item">
-                        <input class="radio__input" type="radio" name="format" value="other">
-                        <span class="radio__mark"></span>
-                        <span>Другое</span>
-                    </label>
-                </div>
+    <div class="pp__form">
+        <div class="pp__block">
+            <span class="pp__title uppercase">
+                Заполните форму <br> и мы подберем площадку
+            </span>
+            <button class="pp__x-btn js-ppCloseBtn">
+                <svg width="24" height="24" class="pp__x-btn_icon">
+                    <use xlink:href="../assets/icons/symbols.svg#cross"></use>
+                </svg>
+            </button>
+            <form class="field" id="js-eventForm">
+                <div class="field__grid_event">
+                    <div class="radio field__grid_format">
+                        <span class="field__title">Формат мероприятия:</span>
+                        <label class="radio__item">
+                            <input class="radio__input checked" type="radio" name="format" value="seminar" checked>
+                            <span class="radio__mark"></span>
+                            <span>Мастер-класс/семинар</span>
+                        </label>
+                        <label class="radio__item">
+                            <input class="radio__input" type="radio" name="format" value="concert">
+                            <span class="radio__mark"></span>
+                            <span>Концерт/выступление</span>
+                        </label>
+                        <label class="radio__item">
+                            <input class="radio__input" type="radio" name="format" value="exhibition">
+                            <span class="radio__mark"></span>
+                            <span>Выставка/показ</span>
+                        </label>
+                        <label class="radio__item">
+                            <input class="radio__input" type="radio" name="format" value="other">
+                            <span class="radio__mark"></span>
+                            <span>Другое</span>
+                        </label>
+                    </div>
 
-                <div class="field__grid_guest_count">
-                    <span class="field__title">Планируемое количество посетителей:</span>
+                    <div class="field__grid_guest_count">
+                        <span class="field__title">Планируемое количество посетителей:</span>
                         <select class="js-selectric" name="amount">
                             <option value="20">до 20 человек</option>
                             <option value="100">от 20 до 100 человек</option>
                             <option value="500">от 100 до 500 человек</option>
                             <option value="1000">более 500 человек</option>
                         </select>
-                </div>
-                <div class="field__grid_date js-dateField">
-                    <span class="field__title">Дата проведения:</span>
-                    <div class="field__date-wrap">
-                        <div class="field__date-inputs">
-                            <input class="field__input field__input--date js-dateDay" type="text" placeholder="ДД" readonly>
-                            <input class="field__input field__input--date js-dateMonth" type="text" placeholder="ММ" readonly>
-                            <input class="field__input field__input--date-year js-dateYear" type="text" placeholder="ГГГГ" readonly>
+                    </div>
+                    <div class="field__grid_date js-dateField">
+                        <span class="field__title">Дата проведения:</span>
+                        <div class="field__date-wrap">
+                            <div class="field__date-inputs">
+                                <input class="field__input field__input--date js-dateDay" type="text" placeholder="ДД" readonly>
+                                <input class="field__input field__input--date js-dateMonth" type="text" placeholder="ММ" readonly>
+                                <input class="field__input field__input--date-year js-dateYear" type="text" placeholder="ГГГГ" readonly>
+                            </div>
+                            <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
                         </div>
-                        <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
                     </div>
                 </div>
-            </div>
-            <span class="field__title">Контактные данные:</span>
-            <div class="field__grid_contact">
-                <label class="field field__grid_firstname">
-                    <span class="field__label">
-                        Имя*
-                    </span>
-                    <input class="field__input" type="text" placeholder="Имя" name="firstname" required>
-                </label>
-                <label class="field__grid_secondname">
-                    <span class="field__label">
-                        Фамилия*
-                    </span>
-                    <input class="field__input" type="text" placeholder="Фамилия" name="secondname" required>
-                </label>
-                <label class="field__grid_number">
-                    <span class="field__label">
-                        Телефон*
-                    </span>
-                    <input class="field__input js-mobileMask" type="text" placeholder="Телефон" name="tel" required>
-                </label>
-                <label class="field__grid_email">
-                    <span class="field__label">
-                        Email*
-                    </span>
-                    <input class="field__input email" type="text" placeholder="Email" name="email" required>
-                </label>
-            </div>
-            <span class="field__title">Есть пожелания? Напишите нам:</span>
-            <textarea class="field__textarea" name="comment"></textarea>
+                <span class="field__title">Контактные данные:</span>
+                <div class="field__grid_contact">
+                    <label class="field field__grid_firstname">
+                        <span class="field__label">
+                            Имя*
+                        </span>
+                        <input class="field__input" type="text" placeholder="Имя" name="firstname" required>
+                    </label>
+                    <label class="field__grid_secondname">
+                        <span class="field__label">
+                            Фамилия*
+                        </span>
+                        <input class="field__input" type="text" placeholder="Фамилия" name="secondname" required>
+                    </label>
+                    <label class="field__grid_number">
+                        <span class="field__label">
+                            Телефон*
+                        </span>
+                        <input class="field__input js-mobileMask" type="text" placeholder="Телефон" name="tel" required>
+                    </label>
+                    <label class="field__grid_email">
+                        <span class="field__label">
+                            Email*
+                        </span>
+                        <input class="field__input email" type="text" placeholder="Email" name="email" required>
+                    </label>
+                </div>
+                <span class="field__title">Есть пожелания? Напишите нам:</span>
+                <textarea class="field__textarea" name="comment"></textarea>
 
-            <label class="check">
-                <label class="check__text">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</label>
-                <input type="checkbox" name="agree" class="check__input" required/>
-                <span class="check__mark"></span>
-            </label>
-            <div class="field__buttons">
-                <button class="field__button field__button--send">Отправить</button>
-                <div class="field__button_wrap">
+                <label class="check">
+                    <label class="check__text">Я соглашаюсь с пользовательским соглашением и с политикой использования персональных данных</label>
+                    <input type="checkbox" name="agree" class="check__input" required />
+                    <span class="check__mark"></span>
+                </label>
+                <div class="field__buttons">
+                    <button class="field__button field__button--send">Отправить</button>
                     <button class="field__button js-ppCloseBtn">Закрыть</button>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 </div>

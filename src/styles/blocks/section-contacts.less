@@ -1,11 +1,14 @@
 .section-contacts {
     display: flex;
     flex-direction: column;
-    margin-top: 93px;
-    margin-bottom:150px;
+    margin-bottom: 150px;
 
-    &__title {
-        margin-bottom: 150px;
+    @media @bw1660 {
+        margin-bottom: 130px;
+    }
+
+    @media @bw1340 {
+        margin-bottom: 100px;
     }
 
     &__content {
@@ -13,10 +16,113 @@
         flex-direction: row;
         justify-content: space-between;
         height: 493px;
+
+        @media @bw1660 {
+        }
+
+        @media @bw1340 {
+            margin: 0 auto 0 auto;
+            width: 708px;
+            row-gap: 100px;
+            height: auto;
+            justify-content: unset;
+            flex-direction: column;
+        }
+
+        @media @bw768 {
+            width: auto;
+            row-gap: 60px;
+            margin: 0;
+        }
     }
 
-    &__map{
-        height:493px;
-        width:752px;
+    &__map {
+        order: 2;
+        height: 446px;
+        width: 752px;
+
+        @media @bw1340 {
+            order: 1;
+            width: 100%;
+        }
+    }
+
+    &__infos {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        row-gap: 67px;
+
+
+        @media @bw1340 {
+            order: 2;
+            flex-direction: row;
+        }
+
+        @media @bw768 {
+            flex-direction: column;
+            justify-content: unset;
+            row-gap: 67px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        gap: 30px 54px;
+        align-items: center;
+
+
+        @media @bw1340 {
+            flex-direction: column;
+        }
+
+        @media @bw768 {
+            flex-direction: row;
+            column-gap: 30px;
+        }
+    }
+
+    &__info_img {
+        padding: 45px;
+        background-color: #1f1e1e;
+        max-height: 20px;
+        max-width: 20px;
+    }
+
+    &__textblock {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    &__textblock_title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 5px;
+
+
+        @media @bw1340 {
+            font-size: 16px;
+        }
+
+        @media @bw768 {
+            font-size: 14px;
+        }
+    }
+
+    &__textblock_text {
+        font-size: 16px;
+        font-weight: 400;
+
+
+        @media @bw1340 {
+            text-align: center;
+        }
+
+        @media @bw768 {
+            text-align: left;
+        }
     }
 }

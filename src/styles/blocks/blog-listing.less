@@ -1,12 +1,23 @@
 .blog-listing {
     display: flex;
     flex-direction: column;
-    margin-top: 64px;
-    margin-bottom: 93px;
+    margin: 64px auto 93px auto;
 
+    @media @bw1660 {
+        margin: 71px auto 105px auto;
+    }
 
-    &__section-title {
-        margin-bottom: 150px;
+    @media @bw1340 {
+        margin: 35px auto 73px auto;
+        margin-top: 35px;
+        width: 708px;
+        align-items: center;
+    }
+
+    @media @bw768 {
+        margin: 41px 0 75px 0;
+        align-items: unset;
+        width: 100%;
     }
 
     &__more {
@@ -16,5 +27,18 @@
         margin-top: 85px;
         display: inherit;
         margin-left: auto;
+
+        @media @bw1660 {
+            margin-top: 73px;
+        }
+
+        @media @bw1340 {
+            margin-top: 55px;
+        }
+
+        @media @bw768 {
+            margin-top: 45px;
+            font-size: 14px;
+        }
     }
 }

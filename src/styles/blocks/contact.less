@@ -4,14 +4,38 @@
         font-size: 22px;
         font-weight: 400;
         text-align: center;
-        margin-bottom: 50px;
+        margin-bottom: 46px;
+
+        @media @bw1340 {
+            font-size: 16px;
+            margin-bottom: 43px;
+        }
+
+        @media @bw768 {
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
     }
 
     &__actions {
         display: flex;
         justify-content: center;
-        column-gap: 98px;
+        column-gap: 84px;
+        row-gap: 25px;
         margin-bottom: 100px;
+
+        @media @bw1660 {
+            column-gap: 64px;
+        }
+
+        @media @bw1340 {
+            column-gap: 26px;
+        }
+
+        @media @bw768 {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__btn {
@@ -20,9 +44,14 @@
         padding: 15px 0;
         cursor: pointer;
         font-family: "opensans",serif;
+
+        @media @bw768 {
+            font-size: 14px;
+        }
     }
 
     &__btn--want_event {
+        order: 1;
         color: @white;
         background-color: @red;
         border: none;
@@ -32,19 +61,39 @@
         &:hover {
             background-color: @red_hover;
         }
+
+        @media @bw768 {
+            order: 2;
+            width: 100%;
+            max-width: 280px;
+        }
     }
 
     &__btn--be_tenant {
+        order: 2;
         color: @black;
         background-color: transparent;
         border: 1px solid @black;
-        width: 246px;
-        margin-left: 8px;
+        width: 244px;
+        margin-left: 24px;
         transition: color .2s, background-color .2s;
 
         &:hover {
             color: @white;
             background-color: @black
+        }
+
+        @media @bw1660 {
+        }
+
+        @media @bw1340 {
+        }
+
+        @media @bw768 {
+            margin: 0;
+            width: 100%;
+            max-width: 278px;
+            order: 1;
         }
     }
 

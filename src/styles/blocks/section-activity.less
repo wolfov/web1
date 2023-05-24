@@ -3,6 +3,33 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    --margin-right: 60px;
+    --show_slides: 3;
+    --card_width: 405px;
+
+    @media @bw1660 {
+        --margin-right: 40px;
+        --card_width: 393px;
+    }
+
+    @media @bw1340 {
+        margin-top: 50px;
+        --margin-right: 30px;
+        --card_width: 280px;
+    }
+
+    @media @bw768 {
+        margin-top: 60px;
+        --margin-right: 20px;
+    }
+
+    @media @bw1020 {
+        --show_slides: 2;
+    }
+
+    @media @bw650 {
+        --show_slides: 1;
+    }
 
 
     &__hexagonal_wrap {
@@ -23,17 +50,15 @@
         z-index: 5;
         display: flex;
         flex-direction: column;
-        margin-top: 150px;
         margin-bottom: 100px;
     }
 
-    --margin-right: 60px;
-    --show_slides: 3;
+
 
     &__slider {
         overflow: hidden;
         position: relative;
-        max-width: calc(var(--show_slides) * var(--card-max-width) + (var(--show_slides) - 1) * var(--margin-right));
+        max-width: calc(var(--show_slides) * var(--card_width) + (var(--show_slides) - 1) * var(--margin-right));
         align-self: center;
     }
 
@@ -43,7 +68,7 @@
     }
 
     &__slide {
-        flex: 1 0 calc(100% / var(--show_slides) - var(--margin-right) / var(--show_slides) * (var(--show_slides) - 1));
+        min-width: var(--card_width);
         margin-right: var(--margin-right);
     }
 
@@ -52,15 +77,32 @@
         margin-top: 70px;
         display: flex;
         justify-content: center;
-        column-gap: 120px;
+        column-gap: 244px;
+
+        @media @bw1660 {
+            column-gap: 194px;
+        }
+
+        @media @bw1340 {
+            column-gap: 104px;
+        }
+
+        @media @bw768 {
+            column-gap: 84px;
+            margin-top: 60px;
+        }
     }
 
     &__more {
         cursor: pointer;
         font-size: 16px;
         font-weight: 600;
-        margin-top: 85px;
+        margin-top: 15px;
         display: inherit;
         margin-left: auto;
+
+        @media @bw768 {
+            margin-top: 33px;
+        }
     }
 }
